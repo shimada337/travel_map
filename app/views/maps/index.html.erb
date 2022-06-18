@@ -1,12 +1,5 @@
-<h1>地図一覧画面</h1>
+<h1>旅行マップ</h1>
 <div id='map'></div>
-
-<style>
-#map {
-  height: 600px;
-  width: 600px;
-}
-</style>
 
 <script>
 let map
@@ -15,7 +8,7 @@ function initMap(){
   geocoder = new google.maps.Geocoder()
 
   map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 40.7828, lng:-73.9653},
+    center: {lat: 35.6809961911556, lng: 139.76949498652613 },
     zoom: 12,
   });
 
