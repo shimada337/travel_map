@@ -8,9 +8,14 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['API_KEY'] %>&callback=initMap" async defer></script>
+    <script src="https://kit.fontawesome.com/0408d59437.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
+    <header>
+      <%= render 'layouts/header' %>
+    </header>
     <%= yield %>
   </body>
 </html>
