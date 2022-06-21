@@ -10,22 +10,22 @@
 <script type="text/javascript">
   function initMap() {
 // latitude,longitudeから位置を特定
-    let test = {lat: <%= @post.latitude %>, lng: <%= @post.longitude %>};
+    let place = {lat: <%= @post.latitude %>, lng: <%= @post.longitude %>};
     let map = new google.maps.Map(document.getElementById('map'), {
       zoom: 15, 
-      center: test
+      center: place
       });
     let transitLayer = new google.maps.TransitLayer();
     transitLayer.setMap(map);
 
-    let contentString = '住所：<%= @post.address %>';
+    let contentString = '場所：<%= @post.address %>';
     let infowindow = new google.maps.InfoWindow({
       content: contentString
     });
 
 // Map上の指定した位置にピンを挿して表示する
     let marker = new google.maps.Marker({
-      position:test,
+      position:place,
       map: map,
       title: contentString
      });
