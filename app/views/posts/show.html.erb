@@ -9,7 +9,7 @@
 <script type="text/javascript">
   function initMap() {
 // latitude,longitudeから位置を特定
-    let test ={lat: <%= @post.latitude %>, lng: <%= @post.longitude %>};
+    let test = {lat: <%= @post.latitude %>, lng: <%= @post.longitude %>};
     let map = new google.maps.Map(document.getElementById('map'), {
       zoom: 15, 
       center: test
