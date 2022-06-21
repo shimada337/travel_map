@@ -1,10 +1,10 @@
 <h2>ユーザー編集</h2>
  <%= form_with model: @user, method: :patch do |f| %>
     <div class="form-group">
-      <label for="user_name" class="linear-gradient">ユーザーネーム</label>
-      <%= f.text_field :name, placeholder:"名前", class:"form-control name" %>
+      <label for="name">ユーザーネーム</label>
+      <%= f.text_field :name, placeholder:"名前" %>
     </div>
     <div class="form-group">
-      <%= f.submit '更新', class:"btn btn-success btn-border" %>
+      <%= f.submit '更新' %>
     </div>
   <% end %>

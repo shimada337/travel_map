@@ -1,0 +1,28 @@
+<h2>新規投稿</h2>
+<%= form_with model: @post do |f| %>
+  <!--<div>-->
+  <!--  <%#= f.label :image, "投稿画像 (png、jpg、jpeg形式のファイルを選択してください)" %>-->
+  <!--</div>-->
+  <!--<div>-->
+  <!--  <%#= f.file_field :image, accept: "image/*" %>-->
+  <!--</div>-->
+  <div>
+    <%= f.label :name, "名称" %>
+    <%= f.text_field :name, placeholder: '名称を入力してください' %>
+  </div>
+  <div>
+    <%= f.label :body, "本文", class: "linear-gradient" %>
+    <%= f.text_area :body, class: "form-control", rows: 10, placeholder: '投稿本文を入力してください' %>
+  </div>
+  <div>
+    <%= f.label :address, "住所" %>
+    <%= f.text_field :address, placeholder: '住所を入力してください' %>
+  </div>
+  <div>
+    <%= f.label :area, "地域" %>
+    <%= f.select :area, Post.areas.keys, {}, placeholder: '地域を選択してください' %>
+  </div>
+  <div>
+    <%= f.submit '投稿' %>
+  </div>
+<% end %>
