@@ -4,6 +4,7 @@
 <%= @post.body %>
 <%= @post.area %>
 <%= @post.address %>
+<%= image_tag attachment_url(@post, :image, :fill, 300, 300, format: "jpg") %>
 <div id = "map"></div>
 
 <script type="text/javascript">

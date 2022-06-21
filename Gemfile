@@ -59,3 +59,5 @@ gem 'dotenv-rails'
 gem 'devise'
 gem "enum_help"
 gem "geocoder"
+gem "refile", require: "refile/rails", github: 'manfe/refile'
+gem "refile-mini_magick"
