@@ -1,4 +1,7 @@
 <h2>投稿一覧</h2>
+<!--<input id="address" type="textbox" placeholder="住所を入れて付近を見る">-->
+<!--<input type="button" value="検索する" onclick="codeAddress()">-->
+
 投稿数<%= @posts.count %>
 <div id="map"></div>
 
@@ -33,6 +36,6 @@
        });
       })();
     <% end %>
-    }
+  }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['API_KEY'] %>&callback=initMap" async defer></script>
