@@ -23,7 +23,21 @@
     <%= f.label :tag_name, 'タグ' %>
     <%= f.collection_check_boxes :tag_ids, Tag.all, :id, :tag_name %>
   </div>
+  <div id="stars">
+    <%= f.label :rate, '評価' %>
+    <%= f.hidden_field :rate, id: :review_star %>
+  </div>
   <div>
     <%= f.submit '投稿' %>
   </div>
 <% end %>
+
+<script>
+  $('#stars').raty({
+    starOn: "<%= asset_path('star-on.png') %>",
+    starOff: "<%= asset_path('star-off.png') %>",
+    starHalf: "<%= asset_path('star-half.png') %>",
+    scoreName: 'post[rate]', //登録するモデル名とカラム名を記述
+    half: true,
+  });
+</script>

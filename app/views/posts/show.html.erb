@@ -7,6 +7,7 @@
 <% @post.tags.each do |tag| %>
   <span><%= tag.tag_name %></span>
 <% end %>
+<span class="post-evaluation" data-score = "<%= @post.rate %>"></span>
 <%= image_tag attachment_url(@post, :image, :fill, 300, 300, format: "jpg") %>
 <div id = "map"></div>
 
@@ -37,5 +38,14 @@
        infowindow.open(map, marker);
      });
   }
+  
+  // 評価表示している記述
+  $('.post-evaluation').raty({
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    },
+    path: '/assets/'
+  });
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['API_KEY'] %>&callback=initMap" async defer></script>
