@@ -1,8 +1,14 @@
 class Post < ApplicationRecord
   belongs_to :user
+  has_many :post_tags, dependent: :destroy
+  has_many :tags, through: :post_tags, dependent: :destroy
+  
+  #geocode使用する記述
   geocoded_by :address
   after_validation :geocode, if: :address_changed?
+  #refile使用する記述
   attachment :image
+  
   enum area: {
     "---": 0,
     北海道: 1, 青森県: 2, 岩手県: 3, 宮城県: 4, 秋田県: 5, 山形県: 6, 福島県: 7,

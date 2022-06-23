@@ -4,6 +4,9 @@
 <%= @post.body %>
 <%= @post.area %>
 <%= @post.address %>
+<% @post.tags.each do |tag| %>
+  <span><%= tag.tag_name %></span>
+<% end %>
 <%= image_tag attachment_url(@post, :image, :fill, 300, 300, format: "jpg") %>
 <div id = "map"></div>
 

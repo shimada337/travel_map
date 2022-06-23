@@ -20,6 +20,10 @@
     <%= f.select :area, Post.areas.keys, {}, placeholder: '地域を選択してください' %>
   </div>
   <div>
+    <%= f.label :tag_name, 'タグ' %>
+    <%= f.collection_check_boxes :tag_ids, Tag.all, :id, :tag_name %>
+  </div>
+  <div>
     <%= f.submit '投稿' %>
   </div>
 <% end %>
