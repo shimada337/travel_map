@@ -1,15 +1,17 @@
-<%= link_to @post.user.name, user_path(@post.user_id) %>
-
-<%= @post.name %>
-<%= @post.body %>
-<%= @post.area %>
-<%= @post.address %>
-<% @post.tags.each do |tag| %>
-  <span><%= tag.tag_name %></span>
-<% end %>
-<span class="post-evaluation" data-score = "<%= @post.rate %>"></span>
-<%= image_tag attachment_url(@post, :image, :fill, 300, 300, format: "jpg") %>
-<div id = "map"></div>
+<div class="container">
+  <%= link_to @post.user.name, user_path(@post.user_id) %>
+  
+  <%= @post.name %>
+  <%= @post.body %>
+  <%= @post.area %>
+  <%= @post.address %>
+  <% @post.tags.each do |tag| %>
+    <span><%= tag.tag_name %></span>
+  <% end %>
+  <span class="post-evaluation" data-score = "<%= @post.rate %>"></span>
+  <%= image_tag attachment_url(@post, :image, :fill, 300, 300, format: "jpg") %>
+  <div id = "map"></div>
+</div>
 
 <script type="text/javascript">
   function initMap() {
