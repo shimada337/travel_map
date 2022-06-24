@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  
   def new
     @post = Post.new
   end
@@ -19,6 +20,12 @@ class PostsController < ApplicationController
     @post.user_id = current_user.id
     @post.save
     redirect_to post_path(@post.id)
+  end
+  
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to user_path(current_user.id)
   end
   
   private

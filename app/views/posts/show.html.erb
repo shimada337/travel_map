@@ -10,6 +10,9 @@
   <% end %>
   <span class="post-evaluation" data-score = "<%= @post.rate %>"></span>
   <%= image_tag attachment_url(@post, :image, :fill, 300, 300, format: "jpg") %>
+  <% if @post.user_id == current_user.id %>
+    <%= link_to "削除", post_path(@post.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
+  <% end %>
   <div id = "map"></div>
 </div>
 
