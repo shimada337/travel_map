@@ -38,5 +38,12 @@ ul > li {
 
 .header-link {
   text-decoration: none;
+  color: black;
   margin-right: 5px;
+  padding: 3px;
+  border: 3px solid blue;
+}
+
+.header-container {
+  display: flex;
 }
