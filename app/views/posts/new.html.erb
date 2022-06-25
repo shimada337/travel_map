@@ -1,36 +1,38 @@
-<h2>新規投稿</h2>
-<%= form_with model: @post do |f| %>
-  <div>
-    <%= f.label :name, "名称" %>
-    <%= f.text_field :name, placeholder: '名称を入力してください' %>
-  </div>
-  <div>
-    <%= f.label :body, "本文", class: "linear-gradient" %>
-    <%= f.text_area :body, class: "form-control", rows: 10, placeholder: '投稿本文を入力してください' %>
-  </div>
-  <div>
-    <%= f.attachment_field :image %>
-  </div>
-  <div>
-    <%= f.label :address, "住所" %>
-    <%= f.text_field :address, placeholder: '住所を入力してください' %>
-  </div>
-  <div>
-    <%= f.label :area, "地域" %>
-    <%= f.select :area, Post.areas.keys, {}, placeholder: '地域を選択してください' %>
-  </div>
-  <div>
-    <%= f.label :tag_name, 'タグ' %>
-    <%= f.collection_check_boxes :tag_ids, Tag.all, :id, :tag_name %>
-  </div>
-  <div id="stars">
-    <%= f.label :rate, '評価' %>
-    <%= f.hidden_field :rate, id: :review_star %>
-  </div>
-  <div>
-    <%= f.submit '投稿' %>
-  </div>
-<% end %>
+<div class="container">
+  <h2>新規投稿</h2>
+  <%= form_with model: @post do |f| %>
+    <div>
+      <%= f.label :name, "名称" %>
+      <%= f.text_field :name, :size => "25", placeholder: '名称を入力してください' %>
+    </div>
+    <div>
+      <%= f.label :body, "本文", class: "linear-gradient" %>
+      <%= f.text_area :body, class: "form-control", :size => "25x10", placeholder: '投稿本文を入力してください' %>
+    </div>
+    <div>
+      <%= f.attachment_field :image %>
+    </div>
+    <div>
+      <%= f.label :address, "住所" %>
+      <%= f.text_field :address, :size => "25", placeholder: '住所を入力してください' %>
+    </div>
+    <div>
+      <%= f.label :area, "地域" %>
+      <%= f.select :area, Post.areas.keys, {} %>
+    </div>
+    <div>
+      <%= f.label :tag_name, 'タグ' %>
+      <%= f.collection_check_boxes :tag_ids, Tag.all, :id, :tag_name %>
+    </div>
+    <div id="stars">
+      <%= f.label :rate, '評価' %>
+      <%= f.hidden_field :rate, id: :review_star %>
+    </div>
+    <div>
+      <%= f.submit '投稿' %>
+    </div>
+  <% end %>
+</div>
 
 <script>
   $('#stars').raty({
