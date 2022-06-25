@@ -1,0 +1,13 @@
+<div class="container">
+  <% if @results.present? %>
+    <h2>”<%= params[:q][:name_cont] %>”の検索結果： "<%= @results.count %>" 件</h2>
+    <% @results.each do |post| %>
+      <div class="post-card">
+        <p><%= link_to post.name, post_path(post) %></p>
+        <%= image_tag attachment_url(post, :image, :fill, 300, 300, format: "jpg") %>
+      </div>
+    <% end %>
+  <% else %>
+    <p>”<%= params[:q][:name_cont] %>”の検索に一致する投稿がありませんでした</p>
+  <% end %>
+</div>

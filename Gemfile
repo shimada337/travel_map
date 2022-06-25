@@ -64,3 +64,5 @@ gem "refile-mini_magick"
 gem 'devise-i18n'
 gem 'rails-i18n'
 gem 'jquery-rails'
+gem 'ransack'
+gem 'pry-rails'

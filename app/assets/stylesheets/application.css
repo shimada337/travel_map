@@ -80,3 +80,10 @@ tr {
 .row {
   display: flex;
 }
+
+.post-card {
+  border: 5px solid #87ceeb;
+  background-color: #f0f8ff;
+  display: inline-block;
+  padding: 0 10px;
+}
