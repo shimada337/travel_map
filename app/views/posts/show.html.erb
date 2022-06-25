@@ -1,19 +1,50 @@
 <div class="container">
-  <%= link_to @post.user.name, user_path(@post.user_id) %>
-  
-  <%= @post.name %>
-  <%= @post.body %>
-  <%= @post.area %>
-  <%= @post.address %>
-  <% @post.tags.each do |tag| %>
-    <span><%= tag.tag_name %></span>
-  <% end %>
-  <span class="post-evaluation" data-score = "<%= @post.rate %>"></span>
-  <%= image_tag attachment_url(@post, :image, :fill, 300, 300, format: "jpg") %>
+  <div class="row">
+    <div id = "map"></div>
+    <table>
+      <tbody>
+        <tr>
+          <th>投稿者</th>
+          <td><%= link_to @post.user.name, user_path(@post.user_id) %></td>
+        </tr>
+        <tr>
+          <th>名称、タイトル</th>
+          <td><%= @post.name %></td>
+        </tr>
+        <tr>
+          <th>本文</th>
+          <td><%= @post.body %></td>
+        </tr>
+        <tr>
+          <th>エリア</th>
+          <td><%= @post.area %></td>
+        </tr>
+        <tr>
+          <th>住所</th>
+          <td><%= @post.address %></td>
+        </tr>
+         <tr>
+          <th>タグ</th>
+          <td>
+            <% @post.tags.each do |tag| %>
+              <li><%= tag.tag_name %></li>
+            <% end %>
+          </td>
+        </tr>
+         <tr>
+          <th>評価</th>
+          <td><span class="post-evaluation" data-score = "<%= @post.rate %>"></span></td>
+        </tr>
+         <tr>
+          <th>画像</th>
+          <td><%= image_tag attachment_url(@post, :image, :fill, 300, 300, format: "jpg") %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
   <% if @post.user_id == current_user.id %>
     <%= link_to "削除", post_path(@post.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
   <% end %>
-  <div id = "map"></div>
 </div>
 
 <script type="text/javascript">

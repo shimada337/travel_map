@@ -22,7 +22,7 @@
     
     <% @posts.each do |post| %>
       (function(){
-        let contentString = "<a href='/posts/<%= post.id %>'><%= post.address %></a>"; 
+        let contentString = "<a href='/posts/<%= post.id %>'><%= post.name %></a>"; 
         let infowindow = new google.maps.InfoWindow({
           content: contentString
         });
