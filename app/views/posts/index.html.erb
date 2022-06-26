@@ -5,7 +5,7 @@
     <%= f.label :name, '投稿タイトル' %>
     <%= f.search_field :name_cont, :size => "25", :placeholder => "名称やタイトルを入力" %><br>
     <%= f.label :area, 'エリア' %>
-    <%= f.select :area_eq, Post.areas.map {|k,v| [k,v]}, {} %><br>
+    <%= f.select :area_eq, Post.areas.map {|k,v| [k,v]}, {} %><br> <!-- エリアをkey（数字）で受け取る -->
     <%= f.label :tag, 'タグ' %>
     <%= collection_check_boxes :q, :tags_id_eq_any, Tag.all, :id, :tag_name do |tag| %>
       <% tag.label {tag.check_box + tag.text } %>
@@ -18,7 +18,7 @@
       <%= f.radio_button :rate_gteq, 3 %> ⭐3以上
       <%= f.radio_button :rate_gteq, 4 %> ⭐4以上
       <%= f.radio_button :rate_eq, 5 %> ⭐5<br>
-    <%= f.submit '検索', class: "post-search" %>
+    <%= f.submit '検索', class: "search-btn" %>
   <% end %>
   投稿数：<em>(<%= @posts.count %>件)</em>
   <div id="map"></div>

@@ -102,15 +102,65 @@ tr {
   font-weight: bold;
 }
 
-.post-search {
+.search-btn {
   font-weight: bold;
   width: 100px;
   background-color: #fff100;
   border-bottom: 5px solid #ccc100;
 }
 
-.post-search:hover {
+.search-btn:hover {
   margin-top: 3px;
   background: #fff20a;
   border-bottom: 2px solid #ccc100;
+  cursor: pointer;
+}
+
+.setting-btn {
+ display: inline-block;
+ margin-top: 10px;
+ color: #090909;
+ padding: 0.7em 1.7em;
+ font-size: 18px;
+ border-radius: 0.5em;
+ background: #e8e8e8;
+ border: 1px solid #e8e8e8;
+ transition: all .3s;
+ box-shadow: 6px 6px 12px #c5c5c5,
+             -6px -6px 12px #ffffff;
+}
+
+.setting-btn:hover {
+  border: 3px solid white;
+}
+
+.user-head {
+  background-color: #fafafa;
+  height: 30px;
+}
+
+.new-post-btn {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+  background: #57cc99;
+  text-decoration: none;
+  margin-top: 20px;
+  text-align: center;
+  line-height: 40px;
+}
+.new-post-btn:hover {
+  background-color: #80ed99;
+}
+.new-post-btn:active {
+  top: 2px;
 }
