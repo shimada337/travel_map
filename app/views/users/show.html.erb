@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="user-head"><small>ユーザーネーム：</small><%= @user.name %></div>
+  <small>ユーザーネーム：</small><div class="user-head"><%= @user.name %></div>
   <div>
     <%= link_to edit_user_path(@user.id), class: "setting-btn" do %>
       <i class="fas fa-user-cog"></i>
@@ -8,7 +8,7 @@
   <div>
     <%= link_to '新規投稿', new_post_path, class: "new-post-btn" %>
   </div>
-  <h3>投稿一覧</h3>
+  <h3><i class="fas fa-list"></i> 投稿一覧</h3>
   <% @posts.each do |post| %>
     <div class="post-card">
         <div class="text-box">
