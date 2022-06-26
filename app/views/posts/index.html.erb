@@ -2,8 +2,14 @@
   <h2>投稿一覧</h2>
   <p>~投稿検索~</p>
   <%= search_form_for @q, url: search_posts_path do |f| %>
-    <%= f.label :name_cont, '投稿タイトル' %><br>
-    <%= f.search_field :name_cont, :size => "25", :placeholder => "名称やタイトルを入力", required: "required" %>
+    <%= f.label :name, '投稿タイトル' %><br>
+    <%= f.search_field :name_cont, :size => "25", :placeholder => "名称やタイトルを入力" %>
+    <%= f.label :area, 'エリア' %>
+    <%= f.select :area_eq, Post.areas.map {|k,v| [k,v]}, {} %>
+    <%= collection_check_boxes :q, :tags_id_eq_any, Tag.all, :id, :tag_name do |tag| %>
+      <% tag.label {tag.check_box + tag.text } %>
+    <% end %>
+    
     <%= f.submit '検索' %>
   <% end %>
   投稿数：<em>(<%= @posts.count %>件)</em>

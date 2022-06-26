@@ -30,7 +30,7 @@ class PostsController < ApplicationController
   end
   
   def search
-    @results = @q.result
+    @results = Post.ransack(params[:q]).result(distinct: true)
   end
   
   private
