@@ -81,6 +81,15 @@ tr {
   display: flex;
 }
 
+.maps {
+  margin-right: 10px;
+}
+
+.search-box {
+  border: 5px solid black;
+  padding: 10px;
+}
+
 .post-card {
   text-align: center;
   width: 300px;
