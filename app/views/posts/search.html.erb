@@ -1,6 +1,6 @@
 <div class="container">
   <% if @results.present? %>
-    <h2>”<%= params[:q][:name_cont] %>”の検索結果： "<%= @results.count %>" 件</h2>
+    <h2>投稿検索結果： "<%= @results.count %>" 件</h2>
     <% @results.each do |post| %>
       <div class="post-card">
         <div class="text-box">
@@ -10,6 +10,6 @@
       </div>
     <% end %>
   <% else %>
-    <p>”<%= params[:q][:name_cont] %>”の検索に一致する投稿がありませんでした</p>
+    <p>検索に一致する投稿がありませんでした</p>
   <% end %>
 </div>

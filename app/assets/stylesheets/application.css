@@ -101,3 +101,16 @@ tr {
 .post-link {
   font-weight: bold;
 }
+
+.post-search {
+  font-weight: bold;
+  width: 100px;
+  background-color: #fff100;
+  border-bottom: 5px solid #ccc100;
+}
+
+.post-search:hover {
+  margin-top: 3px;
+  background: #fff20a;
+  border-bottom: 2px solid #ccc100;
+}
