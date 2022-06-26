@@ -3,7 +3,7 @@
   <p>~投稿検索~</p>
   <%= search_form_for @q, url: search_posts_path do |f| %>
     <%= f.label :name_cont, '投稿タイトル' %><br>
-    <%= f.search_field :name_cont, :size => "25", :placeholder => "名称やタイトルを入力" %>
+    <%= f.search_field :name_cont, :size => "25", :placeholder => "名称やタイトルを入力", required: "required" %>
     <%= f.submit '検索' %>
   <% end %>
   投稿数：<em>(<%= @posts.count %>件)</em>
