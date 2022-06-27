@@ -6,6 +6,8 @@ class Post < ApplicationRecord
   validates :name, presence: true, length: { maximum: 30 }
   validates :body, presence: true, length: { maximum: 300 }
   validates :image, presence: true
+  validates :latitude, presence: true
+  validates :longitude, presence: true
   
   #geocode使用する記述
   geocoded_by :address
