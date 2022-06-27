@@ -3,6 +3,10 @@ class Post < ApplicationRecord
   has_many :post_tags, dependent: :destroy
   has_many :tags, through: :post_tags, dependent: :destroy
   
+  validates :name, presence: true, length: { maximum: 30 }
+  validates :body, presence: true, length: { maximum: 300 }
+  validates :image, presence: true
+  
   #geocode使用する記述
   geocoded_by :address
   after_validation :geocode, if: :address_changed?

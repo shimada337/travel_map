@@ -1,5 +1,6 @@
 <div class="container">
   <h2>新規投稿</h2>
+  <%= render 'layouts/errors', error: @post %>
   <%= form_with model: @post do |f| %>
     <div>
       <%= f.label :name, "名称" %>
