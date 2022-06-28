@@ -1,0 +1,18 @@
+ja:
+  activerecord:
+    models:
+    attributes:
+      post:
+        name: '名称、タイトル'
+        body: '本文'
+        image: '画像'
+        address: '住所'
+        latitude: '住所'
+    errors:
+      models:
+        post:
+          attributes:
+            latitude:
+              blank: 'が存在しません'
+            image:
+              blank: 'を選択してください'
