@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_q, only: [:index, :search]
+  before_action :correct_post, only: [:edit]
   
   def new
     @post = Post.new
@@ -47,6 +48,13 @@ class PostsController < ApplicationController
   
   def post_params
     params.require(:post).permit(:area, :name, :address, :body, :latitude, :longitude, :image, :rate, tag_ids: [])
+  end
+  
+  def correct_post
+    @post = Post.find(params[:id])
+    if @post.user_id != current_user.id
+      redirect_to posts_path
+    end
   end
   
   def set_q
