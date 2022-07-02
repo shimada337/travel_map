@@ -8,6 +8,10 @@ ja:
         image: '画像'
         address: '住所'
         latitude: '住所'
+      user:
+        name: 'ユーザー名'
+        email: 'メールアドレス'
+        
     errors:
       models:
         post:
