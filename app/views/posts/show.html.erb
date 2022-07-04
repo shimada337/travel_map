@@ -44,8 +44,8 @@
     </table>
   </div>
   <% if @post.user_id == current_user.id %>
-    <%= link_to "削除", post_path(@post.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
-    <%= link_to "編集", edit_post_path(@post.id) %>
+    <%= link_to "削除", post_path(@post.id), method: :delete, "data-confirm" => "本当に削除しますか？", class: "post-btn shadow" %>
+    <%= link_to "編集", edit_post_path(@post.id), class: "post-btn edit-btn shadow" %>
   <% end %>
 </div>
 

@@ -159,6 +159,31 @@ tr {
   border: 3px solid white;
 }
 
+.post-btn {
+  color: #fff;
+  padding: 5px 10px;
+  background-color: #ff4500;
+  text-decoration: none;
+}
+
+.post-btn:hover {
+  margin-top: 3px;
+  color: #fff;
+  opacity: 0.6;
+}
+
+.edit-btn {
+  background-color: #228b22;
+}
+
+.edit-btn:hover {
+  color: #fff;
+}
+
+.shadow {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+}
+
 .user-head {
   font-weight: bold;
   height: 30px;
