@@ -127,14 +127,14 @@ tr {
   font-weight: bold;
 }
 
-.search-btn {
+.btns {
   font-weight: bold;
   width: 100px;
   background-color: #fff100;
   border-bottom: 5px solid #ccc100;
 }
 
-.search-btn:hover {
+.btns:hover {
   margin-top: 3px;
   background: #fff20a;
   border-bottom: 2px solid #ccc100;
@@ -214,4 +214,24 @@ tr {
 }
 .new-post-btn:active {
   top: 2px;
+}
+
+.new-post {
+  color: #fff;
+  background-color: #008080;
+  border-bottom: 0;
+}
+
+.new-post:hover {
+  background-color: #008080;
+}
+
+.edit-user-btn {
+  color: #fff;
+  background-color: #3cb371;
+  border-bottom: 0;
+}
+
+.edit-user-btn:hover {
+  background-color: #3cb371;
 }
