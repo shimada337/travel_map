@@ -40,6 +40,10 @@
           <th>画像</th>
           <td><%= image_tag attachment_url(@post, :image, :fill, 300, 300, format: "jpg") %></td>
         </tr>
+        <tr>
+          <th>投稿日時</th>
+          <td><%= l @post.created_at %></td>
+        </tr>
       </tbody>
     </table>
   </div>
