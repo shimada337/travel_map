@@ -250,3 +250,16 @@ tr {
 .edit-user-btn:hover {
   background-color: #3cb371;
 }
+
+.underline {
+  border-bottom: 1px solid #000;
+  padding-bottom: 1px;
+}
+
+.photo-travel {
+  margin: 0 auto; 
+  height: 350px;
+  width: 500px;
+  background-image: url(airport.jpg);
+  background-size: cover;
+}

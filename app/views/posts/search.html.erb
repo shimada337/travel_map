@@ -10,6 +10,12 @@
       </div>
     <% end %>
   <% else %>
-    <p>検索に一致する投稿がありませんでした</p>
+    <p>
+      <i class="fas fa-search"></i> 検索に一致する投稿がありませんでした<br>
+      別の検索をお試しください。
+      <%= link_to :back do %>
+        <button>戻る</button>
+      <% end %>
+    </p>
   <% end %>
 </div>

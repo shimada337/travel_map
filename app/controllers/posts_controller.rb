@@ -9,6 +9,7 @@ class PostsController < ApplicationController
   
   def index
     @posts = Post.all
+    @a = Time.current
   end
 
   def show
