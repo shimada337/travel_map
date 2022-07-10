@@ -252,14 +252,10 @@ tr {
 }
 
 .underline {
-  border-bottom: 1px solid #000;
+  border-bottom: 3px solid #C0C0C0;
   padding-bottom: 1px;
 }
 
 .photo-travel {
-  margin: 0 auto; 
-  height: 350px;
-  width: 500px;
-  background-image: url(airport.jpg);
-  background-size: cover;
+  text-align: center;
 }

@@ -30,8 +30,13 @@
         気になる投稿を検索することができます！<br>
         投稿タイトルは<span class="underline">部分一致</span>で検索可能。
       </p>
-      <div class="photo-travel"></div>
-      <%= @a %>
+      <div class="photo-travel">
+        <% if @time.hour < 17 %> <!-- 時間によって表示画像を変える -->
+          <%= image_tag 'airport.jpg', size: '400x350' %>
+        <% else %>
+          <%= image_tag 'plane.jpg', size: '400x350' %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
