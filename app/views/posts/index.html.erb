@@ -30,13 +30,15 @@
         気になる投稿を検索することができます！<br>
         投稿タイトルは<span class="underline">部分一致</span>で検索可能。
       </p>
+      <%= @time %>
       <div class="photo-travel">
-        <% if @time.hour < 16 && @time.hour > 19 %> <!-- 時間によって表示画像を変える -->
-          <%= image_tag 'airport.jpg', size: '400x350', class: "img" %>
-        <% elsif @time.hour > 19 || @time.hour < 4 %>
-          <%= image_tag 'night-flight.jpg', size: '400x350', class: "img" %>
-        <% else %>
-          <%= image_tag 'plane.jpg', size: '400x350', class: "img" %>
+        <% case @time.hour %>
+          <% when (15..18) then %>
+            <%= image_tag 'plane.jpg', size: '400x350', class: "img" %>
+          <% when (19..23) || (0..4) then %>
+            <%= image_tag 'night-flight.jpg', size: '400x350', class: "img" %>
+          <% else %>
+            <%= image_tag 'airport.jpg', size: '400x350', class: "img" %>
         <% end %>
       </div>
     </div>
