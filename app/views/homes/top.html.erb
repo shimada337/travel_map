@@ -6,7 +6,7 @@
     <h3><i class="fas fa-plane-departure"></i>みんなの旅行スポット</h3>
     <% @random_posts.each do |post| %>
       <%= link_to post_path(post.id) do %>
-        <%= image_tag attachment_url(post, :image, :fill, 200, 200, format: "jpg") %>
+        <%= image_tag attachment_url(post, :image, :fill, 200, 200, format: "jpg"), class: "img" %>
       <% end %>
     <% end %>
   </div>
@@ -15,7 +15,7 @@
     <h3>new! 新着旅行スポット</h3>
     <% @new_posts.each do |post| %>
       <%= link_to post_path(post.id) do %>
-        <%= image_tag attachment_url(post, :image, :fill, 200, 200, format: "jpg") %>
+        <%= image_tag attachment_url(post, :image, :fill, 200, 200, format: "jpg"), class: "img" %>
       <% end %>
     <% end %>
   </div>
