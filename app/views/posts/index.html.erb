@@ -32,12 +32,12 @@
       </p>
       <div class="photo-travel">
         <% case @time.hour %>
+          <% when (5..14) then %>
+            <%= image_tag 'airport.jpg', size: '400x350', class: "img" %>
           <% when (15..18) then %>
             <%= image_tag 'plane.jpg', size: '400x350', class: "img" %>
-          <% when (19..23) || (0..4) then %>
-            <%= image_tag 'night-flight.jpg', size: '400x350', class: "img" %>
           <% else %>
-            <%= image_tag 'airport.jpg', size: '400x350', class: "img" %>
+            <%= image_tag 'night-flight.jpg', size: '400x350', class: "img" %>
         <% end %>
       </div>
     </div>
