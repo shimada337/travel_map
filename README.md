@@ -1,24 +1,33 @@
-# README
+# Travel Map
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+旅行先を投稿したり、他の人たちが旅行で訪れたところを知ることができます。
 
-Things you may want to cover:
+### サイトテーマ
+旅行で訪れたところを投稿できるSNSサイト
 
-* Ruby version
+### テーマを選んだ理由
+旅行をしていて旅行のスポットとスポットの距離がすぐにわかるサイトが欲しいと考えたから。
 
-* System dependencies
+### ターゲットユーザー
 
-* Configuration
 
-* Database creation
+### 主な利用シーン
 
-* Database initialization
 
-* How to run the test suite
+## 設計書
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
 
-* ...
+
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
+
+
+## 使用素材
+- Pixtabay（画像）
+- Canva (ロゴ素材)
