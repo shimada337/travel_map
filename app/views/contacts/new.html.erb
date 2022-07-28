@@ -1,2 +1,13 @@
 <%= form_with model: @contact, url: '/contacts', method: :post do |f| %>
+  <div>
+    <%= f.label :name, 'お名前＊' %>
+    <%= f.text_field :name, autofocus: true %>
+  </div>
+  <div>
+    <%= f.label :message, 'メッセージ＊' %>
+    <%= f.text_area :message, size: '10x10' %>
+  </div>
+  <div>
+    <%= f.submit '入力内容確認' %>
+  </div>
 <% end %>
