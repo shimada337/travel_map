@@ -4,6 +4,18 @@
     <%= f.text_field :name, autofocus: true %>
   </div>
   <div>
+    <%= f.label :email, 'メールアドレス＊' %>
+    <%= f.text_field :email %>
+  </div>
+  <div>
+    <%= f.label :phone_number, '電話番号＊' %>
+    <%= f.text_field :phone_number %>
+  </div>
+  <div>
+    <%= f.label :subject, 'ご用件＊' %>
+    <%= f.select :subject, Contact.subjects.keys, {} %>
+  </div>
+  <div>
     <%= f.label :message, 'メッセージ＊' %>
     <%= f.text_area :message, size: '10x10' %>
   </div>
