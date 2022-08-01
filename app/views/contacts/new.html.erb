@@ -1,25 +1,28 @@
-<%= form_with model: @contact, url: '/contacts', method: :post do |f| %>
+<div class="contact-form">
+  <h2 class="contact-heading">お問い合わせ</h2>
+  <%= form_with model: @contact, url: '/contacts', method: :post do |f| %>
   <div>
-    <%= f.label :name, 'お名前＊' %>
-    <%= f.text_field :name, autofocus: true %>
+    <%= f.label :name, 'お名前＊'   %>
+    <%= f.text_field :name, autofocus: true, class: "input-form" %>
   </div>
   <div>
-    <%= f.label :email, 'メールアドレス＊' %>
-    <%= f.text_field :email %>
+    <%= f.label :email, 'メールアドレス＊'  %>
+    <%= f.text_field :email, class: "input-form"  %>
   </div>
   <div>
-    <%= f.label :phone_number, '電話番号＊' %>
-    <%= f.text_field :phone_number %>
+    <%= f.label :phone_number, '電話番号＊'  %>
+    <%= f.text_field :phone_number, class: "input-form"  %>
   </div>
   <div>
     <%= f.label :subject, 'ご用件＊' %>
-    <%= f.select :subject, Contact.subjects.keys, {} %>
+    <%= f.select :subject, Contact.subjects.keys, {}, class: "input-form"  %>
   </div>
   <div>
     <%= f.label :message, 'メッセージ＊' %>
-    <%= f.text_area :message, size: '10x10' %>
+    <%= f.text_area :message, size: '40x10' %>
   </div>
   <div>
     <%= f.submit '入力内容確認' %>
   </div>
 <% end %>
+</div>

@@ -263,3 +263,17 @@ tr {
 .img {
   border-radius: 10px;
 }
+
+.contact-heading {
+  display: inline-block;
+  padding: 5px;
+  border: 8px ridge;
+}
+
+.contact-form {
+  text-align: center;
+}
+
+.input-form {
+  width: 30%;
+}
